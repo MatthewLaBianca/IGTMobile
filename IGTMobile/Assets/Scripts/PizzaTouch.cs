@@ -6,11 +6,13 @@ using System.Collections.Generic;
 public class PizzaTouch : MonoBehaviour {
 
     public NumberManager numMan;
+    public string LookingFor;
     public List<int> winningNumbers = new List<int>();
     private int randomIndex;
 	// Use this for initialization
 	void Start () {
         randomIndex = 0;
+        LookingFor = "";
 	}
 	
 	// Update is called once per frame
