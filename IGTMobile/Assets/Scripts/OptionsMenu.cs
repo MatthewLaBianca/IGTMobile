@@ -6,13 +6,16 @@ public class OptionsMenu : MonoBehaviour {
     public AnimationClip open;
     public AnimationClip close;
     // Use this for initialization
+    private bool optionsOpen;
     void Awake()
     {
         open.legacy = true;
         close.legacy = true;
     }
 	void Start () {
+        optionsOpen = false;
         options.AddClip(open, "open");
+        options.AddClip(close, "close");
         options.Stop("open");
         options.Stop("close");
 	}
@@ -24,6 +27,14 @@ public class OptionsMenu : MonoBehaviour {
 
     public void ToggleOpen()
     {
-        options.Play("open");
+        if (!optionsOpen)
+        {
+            options.Play("open");
+            optionsOpen = true;
+        }else if(optionsOpen)
+        {
+            options.Play("close");
+            optionsOpen = false;
+        }
     }
 }

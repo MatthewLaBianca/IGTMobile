@@ -22,7 +22,7 @@ public class BalloonTouch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        matchesTxt.text = "Matches: " + matches.ToString();
+        matchesTxt.text = matches.ToString();
 
 	}
 
