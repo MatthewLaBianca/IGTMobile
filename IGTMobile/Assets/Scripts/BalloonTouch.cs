@@ -7,6 +7,7 @@ public class BalloonTouch : MonoBehaviour {
     public Text matchesTxt;
     public int matches;
     private int maxNum;
+    public List<GameObject> splatters = new List<GameObject>();
     public CPNumberGenerator NumGen;
     //public List<int> winningNumbers = new List<int>();
     private int randomIndex;
@@ -49,7 +50,7 @@ public class BalloonTouch : MonoBehaviour {
         }
         GameObject.Find("spot" + balloonNumber.ToString()).GetComponent<Text>().text = randomIndex.ToString();
         GameObject.Find("Balloon" + balloonNumber.ToString()).SetActive(false);
-
+        splatters[balloonNumber - 1].SetActive(true);
     }
 
 
