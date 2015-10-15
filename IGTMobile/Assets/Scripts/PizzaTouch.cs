@@ -23,7 +23,7 @@ public class PizzaTouch : MonoBehaviour {
 	void Update () {
 	    if(pizzasRemaining<=0)
         {
-            StartCoroutine(EndGame(.5f));
+            StartCoroutine(EndGame(2.0f));
         }
 	}
     IEnumerator EndGame(float seconds)
