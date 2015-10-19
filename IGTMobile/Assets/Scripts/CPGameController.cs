@@ -28,7 +28,7 @@ public class CPGameController : MonoBehaviour {
         yield return new WaitForSeconds(secondsToWait);
         Game.SetActive(false);
         endScreen.SetActive(true);
-        matches.text = "Matches: " + balloonPopScript.matches.ToString();
+        //matches.text = "Matches: " + balloonPopScript.matches.ToString();
         yield return 0;
     }
     public void Menu(bool toMenu)
