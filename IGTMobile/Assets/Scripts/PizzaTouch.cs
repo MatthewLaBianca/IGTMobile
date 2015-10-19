@@ -49,7 +49,7 @@ public class PizzaTouch : MonoBehaviour {
         GameObject.Find("spot" + pizzaNumber.ToString()).GetComponent<Text>().text = "$" + winningNumbers[randomIndex].ToString();
         GameObject.Find("pizza" + pizzaNumber.ToString()).SetActive(false);
         numMan.selectedNumbers.Add(winningNumbers[randomIndex]);
-        numMan.CheckForWinners();
+        //numMan.CheckForWinners();
     }
 
 

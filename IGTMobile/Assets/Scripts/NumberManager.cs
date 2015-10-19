@@ -12,6 +12,16 @@ public class NumberManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         matchesOne = 0;
+        matchesTwo = 0;
+        matchesThree = 0;
+        matchesFive = 0;
+        matchesTen = 0;
+        matchesTwenty = 0;
+        matchesFifty = 0;
+        matchesHun = 0;
+        matchesTwoHun = 0;
+        matchesFiveHun = 0;
+
         totalWin = 0;
 	}
 
@@ -52,15 +62,12 @@ public class NumberManager : MonoBehaviour {
                     matchesFiveHun++;
                     break;
             }
-            if(number == 1)
-            {
-                matchesOne++;
-            }
+
         }
     }
 	
 
-    public int EndGame()
+    public int GetWinTotal()
     {
         if(matchesOne >= 3)
         {
