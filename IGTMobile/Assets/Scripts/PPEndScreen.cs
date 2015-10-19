@@ -25,4 +25,9 @@ public class PPEndScreen : MonoBehaviour {
             winAmnt.text = "";
         }
     }
+
+    public int GetWinAmount()
+    {
+        return winAmountInt;
+    }
 }

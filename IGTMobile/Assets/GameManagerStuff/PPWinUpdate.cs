@@ -17,6 +17,6 @@ public class PPWinUpdate : MonoBehaviour {
 
     public void UpdateBalance()
     {
-        
+        gameManager.ChangeBalanceBy(endScreen.GetWinAmount());
     }
 }
