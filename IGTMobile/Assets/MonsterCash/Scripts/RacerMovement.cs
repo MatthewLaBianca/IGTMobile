@@ -15,6 +15,10 @@ public class RacerMovement : MonoBehaviour {
 
     public AudioClip movingSound;
 
+	public AudioClip accSound;
+
+	public AudioClip decSound;
+
     private AudioSource source;
 
     private float volLowRange = 0.1f;
@@ -116,11 +120,13 @@ public class RacerMovement : MonoBehaviour {
 
     void Deccelerate()
     {
+		source.PlayOneShot(accSound);
         acceleration = Random.Range(-0.03f, -0.01f);
     }
 
     void Accelerate()
     {
+		source.PlayOneShot(decSound);
         acceleration = Random.Range(0.00f, 0.025f);
     }
 
@@ -130,6 +136,7 @@ public class RacerMovement : MonoBehaviour {
         yield return new WaitForSeconds(3);
         racerAnimator.SetBool(hash.startraceBool, true);
         source.PlayOneShot(revSound, vol);
+		source.PlayOneShot(movingSound);
         raceStart = true;
     }
 

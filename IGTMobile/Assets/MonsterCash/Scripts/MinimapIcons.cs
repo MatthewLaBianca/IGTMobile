@@ -12,7 +12,7 @@ public class MinimapIcons : MonoBehaviour {
 
     public void Restart()
     {
-        Application.LoadLevel(5);
+        Application.LoadLevel(3);
     }
 
     public void MainMenu()

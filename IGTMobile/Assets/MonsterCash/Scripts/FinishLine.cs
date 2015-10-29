@@ -155,7 +155,7 @@ public class FinishLine : MonoBehaviour {
     }
     public void SubtractBalance()
     {
-        gameManager.GetComponent<Manager>().ChangeBalanceBy((int)(amountToPay * -1));
+        gameManager.GetComponent<Manager>().ChangeBalanceBy((int)( amountToPay * -1));
     }
 
     void PayoutExact(float amount)
